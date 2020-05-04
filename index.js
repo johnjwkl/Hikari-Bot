@@ -37,8 +37,6 @@ client.on('message', message => {
 	if (!message.content.startsWith(settings.prefix) || message.author.bot) return;
 	const args = message.content.slice(settings.prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
-    const user = message.mentions.users.first();// return obj if user exists
-    const banReason = args.slice(' ').first();
     if (!client.commands.has(command)) return;
 
     try {

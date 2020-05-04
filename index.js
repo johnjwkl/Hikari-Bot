@@ -24,12 +24,21 @@ client.login(settings.TOKEN)
 client.on('ready',() => {
 	console.info(`Logged in as ${client.user.tag}!`);
 	console.info(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8`)
+	client.user.setStatus('available')
+	client.user.setPresence({
+		game: {
+			name: '我警告你別打h!help',
+			type: "PLAYING"
+		}
+	});
 });
 
 client.on('message', message => {
 	if (!message.content.startsWith(settings.prefix) || message.author.bot) return;
 	const args = message.content.slice(settings.prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
+    const user = message.mentions.users.first();// return obj if user exists
+    const banReason = args.slice(' ').first();
     if (!client.commands.has(command)) return;
 
     try {

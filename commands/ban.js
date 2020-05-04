@@ -11,4 +11,5 @@ module.exports = {
 				message.channel.send("沒管理員ban你ma呢");
 			})
 		}
-};
+	}
+}

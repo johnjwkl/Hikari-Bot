@@ -2,9 +2,9 @@ module.exports = {
 	name: 'ban',
 	description: 'ban',
 	execute(message, args) {
-		if (!message.guild.member(message.author).hasPerrmission('BAN_MEMBERS')){
+		if (!message.guild.member(message.author).hasPerrmission('ADMINISTRATOR')){
 			return message.channel.send('沒權限ban你ma阿'); }
-		if (!message.guild.member(client.user).hasPermission('BAN_MEMBERS')){
+		if (!message.guild.member(client.user).hasPermission('ADMINISTRATOR')){
 		    return message.channel.send('沒權限ban你ma阿'); }
 		let banMember = message.guild.member(message.mentions.users.first());
 		if (banMember === message.author){

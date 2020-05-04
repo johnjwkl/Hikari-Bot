@@ -10,5 +10,8 @@ module.exports = {
 				message.channel.send("沒管理員ban你ma呢");
 			})
 		}
+		else {
+			message.channel.send("沒管理員ban你ma呢");
+		}
 	}
 }

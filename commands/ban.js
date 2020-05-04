@@ -2,17 +2,14 @@ module.exports = {
 	name: 'ban',
 	description: 'ban',
 	execute(message, args) {
-		if (!message.guild.member(message.author).hasPermission('BAN_MEMBERS')) { return message.channel.send('You do not have the permission for ban users"  !'); }
-
-if (!message.guild.member(client.user).hasPermission('BAN_MEMBERS')) { return message.channel.send('I don\'t have the permission for ban users" !'); }
-
-if (message.mentions.users.size === 0) { return message.channel.send('You need to ping a user !'); }
-let banMember = message.guild.member(message.mentions.users.first());
-if (!banMember) { return message.channel.send('User not found!'); }
-
-        banMember.ban().then((member) => {
-            message.channel.send(member.displayName + " has left the server")
-            message.channel.send(member.displayName + " has been successfully banned by " + message.author);
-        })
-    }
+		if (message.member.hasPermission("ADMINISTRATOR")){
+			var banMember = message.mentions.memebers.first();
+			banMember.ban().then((banMember)=>{
+				message.channel.send(banMember.displayName + "這垃圾已經被ban掉咯")
+				client.sendMessage(banMember, "可憐哪被ban掉了")
+			})
+		else {
+			message.channel.send("沒管理員ban你ma呢")
+		}
+		}
 };

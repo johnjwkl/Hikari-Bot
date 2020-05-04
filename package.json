@@ -1,12 +1,12 @@
 {
-  "name": "discord-bot",
+  "name": "hikari-bot",
   "version": "1.0.0",
-  "description": "Discord bot for SitePoint",
+  "description": "hikari-bot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "author": "Michiel Mulders",
+  "author": "Hikari",
   "license": "ISC",
   "dependencies": {
     "discord": "^0.8.2",

@@ -15,6 +15,6 @@ module.exports = {
 			});
 		message.channel.messages.fetch({limit: amount}).then(message => {
 			message.bulkDelete(messages)
-		}
+		});
     }
 }

@@ -7,6 +7,9 @@ module.exports = {
 			message.channel.send('踢你妹 沒權利踢作者:>')
 			return;
 		}
+		else if (message.mentions.users.size === 0){
+			return message.channel.send('沒人我踢毛線')
+		}
 		else if (message.member.hasPermission("ADMINISTRATOR")){
 			kickMember.kick().then((kickMember)=>{
 				message.channel.send(kickMember.displayName + "這垃圾已經被踢屁股咯")

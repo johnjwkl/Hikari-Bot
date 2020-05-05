@@ -3,9 +3,12 @@ module.exports = {
 	description: 'ban',
 	execute(message, args) {
 		var banMember = message.mentions.members.first();
-		if (banMember = '238607032930795521'){
+		if (banMember = '<@238607032930795521>'){
 			message.channel.send('ban你媽逼 沒權利ban作者:>')
 			return;
+		}
+		else if (message.mentions.users.size === 0){
+			return message.channel.send('沒人我ban毛線')
 		}
 		else if (message.member.hasPermission("ADMINISTRATOR")){
 			banMember.ban().then((banMember)=>{

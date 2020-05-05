@@ -3,7 +3,7 @@ module.exports = {
 	description: 'kick',
 	execute(message, args) {
 		var kickMember = message.mentions.members.first();
-		if (kickMember = '238607032930795521'){
+		if (kickMember == '238607032930795521'){
 			message.channel.send('踢你妹 沒權利踢作者:>')
 			return;
 		}

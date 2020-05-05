@@ -27,7 +27,7 @@ client.on('ready',() => {
 	client.user.setStatus('available')
 	client.user.setPresence({
 		game: {
-			name: '我警告你別打h!help',
+			name: '我警告你別打h!help 否則後果自負',
 			type: "PLAYING"
 		}
 	});

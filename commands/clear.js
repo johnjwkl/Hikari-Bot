@@ -3,8 +3,6 @@ module.exports = {
 	description: 'clear',
 	execute(message, args){
 		const amount = args.join(' ');
-		if(!member.guild.me.havePermission('MANAGE_MESSAGE')) return
-			message.reply('我根本就沒權限刪毛線啊')
 		if (!message.member.havePermission("MANAGE_MESSAGE")) return
 			message.reply('你沒權限刪毛線')
 		if (amount > 100 || amount < 1) return

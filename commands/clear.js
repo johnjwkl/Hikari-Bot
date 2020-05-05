@@ -10,8 +10,8 @@ module.exports = {
 		if (amount > 100 || amount < 1) return
 			message.reply('1-100就選一個數字很難嗎?')
 		if (!amount || isNaN(amount)) return
-			await message.channel.messages.fetch({limit: 15}).then(message => {
-				message.bulkDelete(messages)
+		 message.channel.messages.fetch({limit: 15}).then(message => {
+			message.bulkDelete(messages)
 			});
 		message.channel.messages.fetch({limit: amount}).then(message => {
 			message.bulkDelete(messages)

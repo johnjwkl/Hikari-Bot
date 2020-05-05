@@ -3,7 +3,7 @@ module.exports = {
 	description: 'ban',
 	execute(message, args) {
 		var banMember = message.mentions.members.first();
-		if (kickMember = '238607032930795521'){
+		if (banMember = '238607032930795521'){
 			message.channel.send('ban你媽逼 沒權利ban作者:>')
 			return;
 		}

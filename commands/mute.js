@@ -18,7 +18,13 @@ module.exports = {
 	    	return message.reply('麻煩動一下你的臭手 標註一個人嗎')
 	    }
 	    else if (!role) {
-	    	return message.reply('請設置一個禁言的身分組\n名字:Muted/禁言\n權限: SEND_MESSAGE = false')
+	    	message.reply('請設置一個禁言的身分組\n名字:Muted/禁言\n權限: SEND_MESSAGE = false')
+	    	message.guild.createRole({
+	    		name: roleName,
+	    		color: 'BLACk'
+	    		permission: ["SEND_MESSAGE": false]
+	    	})
+	    	return;
 	    }
 	    else {
 	    	muteMember.addRole(role).then((muteMember => {

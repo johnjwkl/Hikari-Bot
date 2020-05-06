@@ -1,6 +1,6 @@
 module.exports = {
-	name: '',
-	description: '',
+	name: 'mute',
+	description: 'mute',
 	execute(message, args){
 		let roleName = 'Muted/禁言'
 		let role = message.guild.roles.find(x => x.name == roleName);

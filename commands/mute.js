@@ -22,3 +22,4 @@ module.exports = {
 	    }
 	    muteMember.addRole(roleName);
 }
+}

@@ -40,8 +40,7 @@ client.on('message', message => {
     if (!client.commands.has(command)) return;
 
     try {
-	client.commands.get(command).execute(message, args)
-	message.delete({timeout: 10000});
+	client.commands.get(command).execute(message, args);
     } catch (error) {
 	console.error(error);
 	message.reply('發生了錯誤咯 都怪你啦 :3');

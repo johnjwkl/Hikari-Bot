@@ -19,7 +19,7 @@ module.exports = {
 	    }
 	    else if (!role) {
 	    	message.reply('請設置一個禁言的身分組\n名字:Muted/禁言\n權限: SEND_MESSAGE = false')
-	    	guild.roles.create({ data: { name: 'Muted/禁言', permissions: ['READ_MESSAGE'] } });
+	    	message.guild.roles.create({ data: { name: 'Muted/禁言', permissions: ['READ_MESSAGE'] } });
 	    	return;
 	    }
 	    else {

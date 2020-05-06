@@ -4,7 +4,7 @@ module.exports = {
 	execute(message, args){
 		let roleName = 'Muted/禁言'
 		let role = message.guild.roles.find(x => x.name == roleName);
-		var muteMember = message.mentions.member.first
+		var muteMember = message.mentions.member.first();
 		if (!message.member.hasPermission('ADMINISTRATOR')){
 			return message.reply('你都沒權限 還敢禁別人:>');
 	    }

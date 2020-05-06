@@ -22,7 +22,7 @@ module.exports = {
 	    	message.guild.createRole({
 	    		name: roleName,
 	    		color: 'BLACk'
-	    		permission: ["SEND_MESSAGE": false]
+	    		permissions: ["SEND_MESSAGE": false]
 	    	})
 	    	return;
 	    }

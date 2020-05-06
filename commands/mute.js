@@ -21,7 +21,9 @@ module.exports = {
 	    	return message.reply('請設置一個禁言的身分組\n名字:Muted/禁言\n權限: SEND_MESSAGE = false')
 	    }
 	    else {
-	    	muteMember.addRole(role);
+	    	muteMember.addRole(role).then((muteMember => {
+	    		message.channel.send('阿賀' + muteMember.displayName +'這人現在被剝奪了說話的權利了')
+	    	}))
 	    }
 }
 }

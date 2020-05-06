@@ -14,7 +14,7 @@ module.exports = {
 	    else if (muteMember == message.author){
 	    	return message.reply('你不能把自己禁掉oao');
 	    }
-	    else if (muteMember === 0){
+	    else if (message.mentions.users.size === 0){
 	    	return message.reply('麻煩動一下你的臭手 標註一個人嗎')
 	    }
 	    else if (!role) {

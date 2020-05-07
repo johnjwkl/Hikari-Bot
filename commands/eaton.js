@@ -2,7 +2,7 @@ module.exports = {
 	name: 'eaton',
 	description: 'eaton',
 	execute(message, args) {
-		message.delete(1000)
+		message.delete(10000)
 		if(!message.member.roles.find(role => role.name === "School Assholes"))
 			return message.channel.send("Access denied");
 		var eaton = Math.round(Math.random()*2+1);

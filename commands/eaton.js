@@ -9,7 +9,7 @@ module.exports = {
 			return message.channel.send("Eaton = Potato confirmed", files:{["./res/eaton.png"]});
 		}
 		if (eaton == 2){
-			return message.channel.send("Eaton now dancing with the coffin team~ ", files:{["./res/eatoncoffin.jpeg"]});
+			return message.channel.send("Eaton now dancing with the coffin team~ ", files:{"./res/eatoncoffin.jpeg"});
 		}
 	}
 };

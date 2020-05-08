@@ -21,7 +21,7 @@ module.exports = {
 	    	message.reply('已經幫你設置好一個禁言的身分組>3\n請再打一次指令吧')
 	    	message.guild.createRole({name: 'Muted/禁言', permissions: [] });
 	    	message.guild.channels.forEach(async (channel, id) => {
-	    		await channel.overwrite.Permission(role, {
+	    		await channel.overwritePermission(role, {
 	    			SEND_MESSAGES: false,
 	    			ADD_REACTIONS: false
 	    		});
@@ -29,9 +29,9 @@ module.exports = {
 	    	return;
 	    }
 	    else {
-	    	muteMember.addRole(role).then((muteMember => {
-	    		message.channel.send('阿賀' + muteMember.displayName +'這人現在被剝奪了說話的權利了')
-	    	}))
+	    	muteMember.addRole(role)
+	    	message.channel.send('awa ' + muteMember.displayName + "已經被剝奪講話的權力了哦")
+	    	return
+	    	};
 	    }
-}
 }

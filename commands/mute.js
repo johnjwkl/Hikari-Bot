@@ -18,8 +18,14 @@ module.exports = {
 	    	return message.reply('麻煩動一下你的臭手 標註一個人嗎')
 	    }
 	    else if (!role) {
-	    	message.reply('請設置一個禁言的身分組\n名字:Muted/禁言\n權限: SEND_MESSAGE = false')
-	    	message.guild.createRole({name: 'Muted/禁言', permissions: ['READ_MESSAGE'] });
+	    	message.reply('已經幫你設置好一個禁言的身分組>3\n請再打一次指令吧')
+	    	message.guild.createRole({name: 'Muted/禁言', permissions: [] });
+	    	message.guild.channels.forEach(async (channel, id) => {
+	    		await channel.overwrite.Permission(role, {
+	    			SEND_MESSAGES: false,
+	    			ADD_REACTIONS: false
+	    		});
+	    	});
 	    	return;
 	    }
 	    else {

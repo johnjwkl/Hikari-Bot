@@ -19,7 +19,7 @@ module.exports = {
 	    }
 	    else if (!role) {
 	    	message.reply('已經幫你設置好一個禁言的身分組>3\n請再打一次指令吧')
-	    	message.guild.createRole({name: 'Muted/禁言', permissions: [] });
+	    	role = await message.guild.createRole({name: roleName, color: "#ffffff", permissions: []})
 	    	message.guild.channels.forEach(async (channel, id) => {
 	    		await channel.overwritePermission(role, {
 	    			SEND_MESSAGES: false,

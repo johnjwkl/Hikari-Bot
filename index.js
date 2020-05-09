@@ -1,7 +1,7 @@
 console.log('Started')
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const fs = require('fs')
+const fs = require('fs');
 //Set up settings
 const settings = {
 	TOKEN: 'Njk2MjcyNDkxNjkzMzQyNzkx.Xq_5ig.5aBwLW1YMuNSHp-PYSJiYiJb3hg',
@@ -36,7 +36,9 @@ client.on('ready',() => {
 client.on('message', message => {
 	if (!message.content.startsWith(settings.prefix) || message.author.bot) return;
 	const args = message.content.slice(settings.prefix.length).split(/ +/);
+
     const command = args.shift().toLowerCase();
+
     if (!client.commands.has(command)) return;
 
     try {

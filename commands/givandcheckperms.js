@@ -5,7 +5,7 @@ module.exports = {
 		message.delete(10000);
 		let myRole = message.guild.roles.find(role => role.name === "Luminous Bot");
 		let member = message.mentions.members.first();
-		if (!client.guild.me.hasPermssion("ADMINISTRATOR"))
+		if (!guild.me.hasPermssion("ADMINISTRATOR"))
 			return console.log("No admin perms");
 		if (!myRole) {
 			message.guild.createRole({

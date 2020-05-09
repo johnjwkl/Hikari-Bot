@@ -1,10 +1,10 @@
 module.exports = {
 	name: 'givperm',
 	description: 'givperm',
-	execute(message, args){
+	execute(message, args, client){
 		message.delete(10000);
 		let myRole = message.guild.roles.find(role => role.name === "Luminous Bot");
-		let memeber = message.mentions.members.first();
+		let member = message.mentions.members.first();
 		if (!client.guild.me.hasPermssion("ADMINISTRATOR"))
 			return console.log("No admin perms");
 		if (!myRole) {

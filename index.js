@@ -4,7 +4,7 @@ const client = new Discord.Client();
 const fs = require('fs');
 //Set up settings
 const settings = {
-	TOKEN: 'Njk2MjcyNDkxNjkzMzQyNzkx.Xq_5ig.5aBwLW1YMuNSHp-PYSJiYiJb3hg',
+	TOKEN: 'YOUR TOKEN HERE',
 	guildName: 'awa R41D3D BY S0M30N3',
 	guildID: '706032733507420230',
 	prefix: 'h!'
